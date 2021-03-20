@@ -1,9 +1,7 @@
 package ng.com.buttontech.library
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -57,8 +55,6 @@ class DebitCardEditText : AppCompatEditText {
 
     private var mLinesPaint: Paint? = null
 
-    var mColors = IntArray(3)
-
     constructor(context: Context?) : super(context)
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs, 0)
@@ -69,12 +65,6 @@ class DebitCardEditText : AppCompatEditText {
         init(context, attrs, defStyleAttr)
     }
 
-//    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-//    constructor(context: Context, attrs: AttributeSet,
-//                defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes) {
-//        init(context, attrs)
-//    }
-
     private fun init(context: Context, attrs: AttributeSet, defStyleRes: Int) {
         initializeAttributes(context, attrs, defStyleRes)
         multi = context.resources.displayMetrics.density
@@ -82,21 +72,6 @@ class DebitCardEditText : AppCompatEditText {
         lineStrokeSelected *= multi
         mLinesPaint = Paint(paint)
         mLinesPaint?.strokeWidth = lineStroke
-        if (!isInEditMode) {
-            val outValue = TypedValue()
-            context.theme.resolveAttribute(android.R.attr.colorControlActivated,
-                outValue, true)
-            val colorActivated = outValue.data
-            mColors[0] = colorActivated
-            context.theme.resolveAttribute(android.R.attr.colorPrimaryDark,
-                outValue, true)
-            val colorDark = outValue.data
-            mColors[1] = colorDark
-            context.theme.resolveAttribute(android.R.attr.colorControlHighlight,
-                outValue, true)
-            val colorHighlight = outValue.data
-            mColors[2] = colorHighlight
-        }
         setBackgroundResource(0)
         mSpace *= multi
         mLineSpacing *= multi

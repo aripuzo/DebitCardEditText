@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DebitCardEditText">
+
+        <attr name="label_text" format="string"/>
+
+        <attr name="label_text_font" format="string"/>
+        <attr name="text_font" format="string"/>
+
+        <attr name="line_color" format="color"/>
+        <attr name="focused_line_color" format="color"/>
+        <attr name="failed_line_color" format="color"/>
+        <attr name="success_line_color" format="color"/>
+        <attr name="text_color" format="color"/>
+        <attr name="hint_color" format="color"/>
+
+        <attr name="card_number_hint" format="string"/>
+
+        <attr name="line_stroke" format="dimension"/>
+        <attr name="line_stroke_selected" format="dimension"/>
+
+    </declare-styleable>
+</resources>

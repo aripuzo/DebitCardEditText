@@ -1,4 +1,4 @@
-# DebitCardEditText ![Download](https://api.bintray.com/packages/winged90/maven/textarc/images/download.svg?version=1.0.0)
+# DebitCardEditText ![Download](https://jitpack.io/#aripuzo/DebitCardEditText/1.0.0)
 
 Creating a simple debit card edittext
 
